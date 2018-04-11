@@ -23,8 +23,9 @@ Upgrading the Magento applications and extensions you obtain from Magento Market
 {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} is required for developers who wish to contribute to the Magento 2 codebase or anyone who wishes to develop Magento extensions.
 
 ### Web servers
+*	[Apache 2.2 or 2.4](http://httpd.apache.org/download.cgi)
 
-*	[Apache 2.2 or 2.4](http://httpd.apache.org/download.cgi){:target="_blank"}
+	In addition, the apache `mod_rewrite` module must be enabled. `mod_rewrite` enables the server to perform URL rewriting. For more information, see [our Apache documentation]({{ page.baseurl }}install-gde/prereq/apache.html).
 
 	In addition, you must enable the Apache `mod_rewrite` and `mod_version` modules. The [`mod_rewrite`](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html) module enables the server to perform URL rewriting. The [`mod_version`](https://httpd.apache.org/docs/2.4/mod/mod_version.html) module provides flexible version checking for different `httpd` versions. For more information, see [our Apache documentation]({{ page.baseurl }}/install-gde/prereq/apache.html).
 
@@ -69,6 +70,7 @@ The [CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html) and [Ubuntu]
 *	[iconv](http://php.net/manual/en/book.iconv.php){:target="_blank"}
 
 #### PHP OPcache
+We strongly recommend you verify the  [PHP OPcache](http://php.net/manual/en/intro.opcache.php){:target="&#95;blank"} is enabled for performance reasons. The OPcache is enabled in many PHP distributions. To verify if it is installed, see our PHP documentation for [CentOS]({{page.baseurl}}install-gde/prereq/php-centos.html){:target="&#95;blank"} or [Ubuntu]({{page.baseurl}}install-gde/prereq/php-ubuntu.html){:target="&#95;blank"}.
 
 We strongly recommend you verify that [PHP OPcache](http://php.net/manual/en/intro.opcache.php){:target="_blank"} is enabled for performance reasons. The OPcache is enabled in many PHP distributions. To verify if it is installed, see our PHP documentation for [CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html){:target="_blank"} or [Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html){:target="_blank"}.
 

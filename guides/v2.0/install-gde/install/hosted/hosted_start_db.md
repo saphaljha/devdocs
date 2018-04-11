@@ -38,8 +38,4 @@ To configure a MySQL database and database user:
 
 5.	Select the **ALL PRIVILEGES** checkbox at the top of the page and click **Make Changes**.
 
-	<img src="{{ site.baseurl }}/common/images/install-merch_db-user-privs.png" width="750px" alt="Give the database user all privileges to the database">
-
-#### Next step
-
-[Configure PHP]({{ page.baseurl }}/install-gde/install/hosted/hosted_start_php.html)
+	<img src="{{ site.baseurl }}common/images/install-merch_db-user-privs.png" width="750px" alt="Give the database user all privileges to the database">

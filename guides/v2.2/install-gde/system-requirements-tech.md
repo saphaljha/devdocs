@@ -20,16 +20,18 @@ A Linux distribution such as RedHat Enterprise Linux (RHEL), CentOS, Ubuntu, Deb
 Upgrading the Magento applications and extensions you obtain from Magento Marketplaces and other sources can require up to 2GB of RAM. If you are using a system with less than 2GB of RAM, we recommend you create a [swap file]({{ page.baseurl }}/comp-mgr/trouble/cman/out-of-memory.html); otherwise, your upgrade might fail.
 
 ### Composer (latest stable version)
+
 {% glossarytooltip d85e2d0a-221f-4d03-aa43-0cda9f50809e %}Composer{% endglossarytooltip %} is required for developers who wish to contribute to the Magento 2 codebase or anyone who wishes to develop Magento extensions.
 
 ### Web servers
-*	[Apache 2.2 or 2.4](http://httpd.apache.org/download.cgi)
 
-	In addition, the Apache `mod_rewrite` module must be enabled. `mod_rewrite` enables the server to perform URL rewriting. For more information, see [our Apache documentation]({{ page.baseurl }}install-gde/prereq/apache.html).
+* [Apache 2.2 or 2.4](http://httpd.apache.org/download.cgi)
 
-	In addition, you must enable the Apache `mod_rewrite` and `mod_version` modules. The [`mod_rewrite`](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html) module enables the server to perform URL rewriting. The [`mod_version`](https://httpd.apache.org/docs/2.4/mod/mod_version.html) module provides flexible version checking for different `httpd` versions. For more information, see [our Apache documentation]({{ page.baseurl }}/install-gde/prereq/apache.html).
+    In addition, the Apache `mod_rewrite` module must be enabled. `mod_rewrite` enables the server to perform URL rewriting. For more information, see [our Apache documentation]({{ page.baseurl }}install-gde/prereq/apache.html).
 
-*	[nginx 1.x](https://nginx.org/en/download.html)
+    In addition, you must enable the Apache `mod_rewrite` and `mod_version` modules. The [`mod_rewrite`](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html) module enables the server to perform URL rewriting. The [`mod_version`](https://httpd.apache.org/docs/2.4/mod/mod_version.html) module provides flexible version checking for different `httpd` versions. For more information, see [our Apache documentation]({{ page.baseurl }}/install-gde/prereq/apache.html).
+
+* [nginx 1.x](https://nginx.org/en/download.html)
 
 ### Database
 
@@ -49,25 +51,25 @@ Magento only uses MySQL features compatible with MariaDB. MariaDB may not be com
 {:.bs-callout bs-callout-info}
 The [CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html) and [Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html) PHP installation instructions include a step for installing these extensions.
 
-*	[bc-math](http://php.net/manual/en/book.bc.php){:target="_blank"} ({{site.data.var.ee}} only for 2.2.0 - 2.2.3. {{site.data.var.ee}} and {{site.data.var.ce}} as of 2.2.4.)
-*   [ctype](http://php.net/manual/en/book.ctype.php){:target="_blank"}
-*   [curl](http://php.net/manual/en/book.curl.php){:target="_blank"}
-*   [dom](http://php.net/manual/en/book.dom.php){:target="_blank"}
-*   [gd](http://php.net/manual/en/book.image.php){:target="_blank"}, [ImageMagick 6.3.7](http://php.net/manual/en/book.imagick.php){:target="_blank"} (or later) or both
-*   [intl](http://php.net/manual/en/book.intl.php){:target="_blank"}
-*   [mbstring](http://php.net/manual/en/book.mbstring.php){:target="_blank"}
-*   [mcrypt](http://php.net/manual/en/book.mcrypt.php){:target="_blank"}
-*   [hash](http://php.net/manual/en/book.hash.php){:target="_blank"}
-*   [openssl](http://php.net/manual/en/book.openssl.php){:target="_blank"}
-*   [PDO/MySQL](http://php.net/manual/en/ref.pdo-mysql.php){:target="_blank"}
-*   [SimpleXML](http://php.net/manual/en/book.simplexml.php){:target="_blank"}
-*   [soap](http://php.net/manual/en/book.soap.php){:target="_blank"}
-*   [spl](http://php.net/manual/en/book.spl.php){:target="_blank"}
-*   [libxml](http://php.net/manual/en/book.libxml.php){:target="_blank"}
-*   [xsl](http://php.net/manual/en/book.xsl.php){:target="_blank"}
-*   [zip](http://php.net/manual/en/book.zip.php){:target="_blank"}
-*	[json](http://php.net/manual/en/book.json.php){:target="_blank"}
-*	[iconv](http://php.net/manual/en/book.iconv.php){:target="_blank"}
+* [bc-math](http://php.net/manual/en/book.bc.php){:target="_blank"} ({{site.data.var.ee}} only for 2.2.0 - 2.2.3. {{site.data.var.ee}} and {{site.data.var.ce}} as of 2.2.4.)
+* [ctype](http://php.net/manual/en/book.ctype.php){:target="_blank"}
+* [curl](http://php.net/manual/en/book.curl.php){:target="_blank"}
+* [dom](http://php.net/manual/en/book.dom.php){:target="_blank"}
+* [gd](http://php.net/manual/en/book.image.php){:target="_blank"}, [ImageMagick 6.3.7](http://php.net/manual/en/book.imagick.php){:target="_blank"} (or later) or both
+* [intl](http://php.net/manual/en/book.intl.php){:target="_blank"}
+* [mbstring](http://php.net/manual/en/book.mbstring.php){:target="_blank"}
+* [mcrypt](http://php.net/manual/en/book.mcrypt.php){:target="_blank"}
+* [hash](http://php.net/manual/en/book.hash.php){:target="_blank"}
+* [openssl](http://php.net/manual/en/book.openssl.php){:target="_blank"}
+* PDO/MySQL](http://php.net/manual/en/ref.pdo-mysql.php){:target="_blank"}
+* [SimpleXML](http://php.net/manual/en/book.simplexml.php){:target="_blank"}
+* [soap](http://php.net/manual/en/book.soap.php){:target="_blank"}
+* [spl](http://php.net/manual/en/book.spl.php){:target="_blank"}
+* [libxml](http://php.net/manual/en/book.libxml.php){:target="_blank"}
+* [xsl](http://php.net/manual/en/book.xsl.php){:target="_blank"}
+* [zip](http://php.net/manual/en/book.zip.php){:target="_blank"}
+* [json](http://php.net/manual/en/book.json.php){:target="_blank"}
+* [iconv](http://php.net/manual/en/book.iconv.php){:target="_blank"}
 
 #### PHP OPcache
 
@@ -134,4 +136,5 @@ For details, see [Known issues that affect installation]({{ page.baseurl }}/inst
 *	PHPUnit (as a command-line tool) 6.2.0
 
 ### Documentation
+
 [Install Magento prerequisites]({{ page.baseurl }}/install-gde/prereq/prereq-overview.html)

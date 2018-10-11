@@ -44,10 +44,10 @@ Linux systems provide software like PHP in one or more *repositories*. CentOS, u
 
 We're not aware that you can install PHP 7.1 or 7.2 from a CentOS-recommended repository. Therefore, you must consider the following:
 
-*	If you're setting up a system that will be deployed in production, you should choose a hosting provider who uses repositories considered to be safe and reliable.
+*   If you're setting up a system that will be deployed in production, you should choose a hosting provider who uses repositories considered to be safe and reliable.
 
-	You should also consider upgrading to a later version of CentOS that has the desired PHP version in a recommended repository.
-*	If you're setting up a development system, you can use any repository you wish.
+    You should also consider upgrading to a later version of CentOS that has the desired PHP version in a recommended repository.
+*   If you're setting up a development system, you can use any repository you wish.
 
 In this topic, we show how to install PHP using the [Inline with Upstream Stable (IUS)](https://ius.io/GettingStarted){:target="_blank"} repository, which is *not* on the CentOS recommended list. However, packages installed from IUS do not use the same names as CentOS-provided packages, so [no existing system packages are replaced](https://ius.io/Philosophy){:target="_blank"}.
 
@@ -100,9 +100,9 @@ To install PHP 7.1 on CentOS 6 or 7:
     {:.bs-callout .bs-callout-info}
     The preceding message confirms that the <code>Zend OPcache</code> is installed. We strongly recommend using the OPcache for performance reasons. If your PHP distribution does not come with the OPcache, see the  [PHP OPcache documentation](http://php.net/manual/en/opcache.setup.php){:target="_blank"}.
 
-6.	Verify that all [required PHP extensions]({{ page.baseurl }}/install-gde/system-requirements-tech.html#required-php-extensions) were installed:
+6.  Verify that all [required PHP extensions]({{ page.baseurl }}/install-gde/system-requirements-tech.html#required-php-extensions) were installed:
 
-		php -me
+        php -me
 
     You should see output similar to the following:
     ```
@@ -207,7 +207,7 @@ To install PHP 7.1 on Ubuntu 14 or 16:
 
 3.	Verify that all [required PHP extensions]({{ page.baseurl }}/install-gde/system-requirements-tech.html#required-php-extensions) were installed:
 
-		php -me
+        php -me
 
     You should see output similar to the following:
     ```
@@ -267,6 +267,7 @@ To install PHP 7.1 on Ubuntu 14 or 16:
 =======
     </pre>
 
+<<<<<<< HEAD
 ### Install optional `mcrypt`
 
 #### For PHP 7.1
@@ -317,6 +318,58 @@ The output will look like this:
         mcrypt.algorithms_dir => no value => no value
         mcrypt.modes_dir => no value => no value
 >>>>>>> MAGETWO-90024 Add mcrypt install instructions for Ubuntu
+||||||| merged common ancestors
+=======
+### Install optional `mcrypt`
+
+#### For PHP 7.1
+
+`mcrypt` is included in PHP 7.1 and should be installed from the native `mcrypt` library.
+
+#### For PHP 7.2
+
+`mcrypt` is not included in PHP 7.2 and is not required for Magento v2.3. To improve encryption performance, however, we suggest installing `mcrypt` from the [PHP Extension Community Library](https://pecl.php.net/) (PECL).
+
+To install `mcrypt`:
+1. Check the PHP and PECL versions:
+        
+        php -v
+        
+        pecl version
+
+1. Install the `mcrypt` extension:
+        
+        sudo apt-get -y install gcc make autoconf libc-dev pkg-config
+        
+        sudo apt-get -y install libmcrypt-dev
+        
+        sudo pecl install mcrypt-1.0.1
+
+    If you get a `PHP Fatal error:  Cannot use result of built-in function in write context in /usr/share/php/Archive/Tar.php` error, install PEAR and then retry the prior step:
+
+        sudo apt-get install php-pear
+
+1. When you are shown the autodetect prompt press Enter.
+2. Add the install path to both `/cli` and `/apache2` directories:
+        
+        sudo bash -c "echo /your/install/path/mcrypt.so > /etc/php/7.2/cli/conf.d/mcrypt.ini"
+        
+        sudo bash -c "echo /your/install/path/mcrypt.so > /etc/php/7.2/apache2/conf.d/mcrypt.ini"
+
+1. Verify that the extension was successfully installed:
+        
+        php -i | grep mcrypt
+
+The output will look like this:
+         
+         /etc/php/7.2/cli/conf.d/mcrypt.ini
+        Registered Stream Filters => zlib.*, string.rot13, string.toupper, string.tolower, string.strip_tags, convert.*, consumed, dechunk, convert.iconv.*, mcrypt.*, mdecrypt.*
+        mcrypt
+        mcrypt support => enabled
+        mcrypt_filter support => enabled
+        mcrypt.algorithms_dir => no value => no value
+        mcrypt.modes_dir => no value => no value
+>>>>>>> d5d623cb5417027e016a6a61e5689de46ee6e31b
 
 #### Next
 [Required PHP settings]({{ page.baseurl }}/install-gde/prereq/php-settings.html)

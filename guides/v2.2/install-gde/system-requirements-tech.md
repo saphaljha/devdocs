@@ -25,11 +25,11 @@ Upgrading the Magento applications and extensions you obtain from Magento Market
 ### Web servers
 *	[Apache 2.2 or 2.4](http://httpd.apache.org/download.cgi)
 
-	In addition, the apache `mod_rewrite` module must be enabled. `mod_rewrite` enables the server to perform URL rewriting. For more information, see [our Apache documentation]({{ page.baseurl }}install-gde/prereq/apache.html).
+	In addition, the Apache `mod_rewrite` module must be enabled. `mod_rewrite` enables the server to perform URL rewriting. For more information, see [our Apache documentation]({{ page.baseurl }}install-gde/prereq/apache.html).
 
 	In addition, you must enable the Apache `mod_rewrite` and `mod_version` modules. The [`mod_rewrite`](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html) module enables the server to perform URL rewriting. The [`mod_version`](https://httpd.apache.org/docs/2.4/mod/mod_version.html) module provides flexible version checking for different `httpd` versions. For more information, see [our Apache documentation]({{ page.baseurl }}/install-gde/prereq/apache.html).
 
-*	[nginx 1.x](https://nginx.org/en/download.html){:target="_blank"}
+*	[nginx 1.x](https://nginx.org/en/download.html)
 
 ### Database
 
@@ -70,9 +70,8 @@ The [CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html) and [Ubuntu]
 *	[iconv](http://php.net/manual/en/book.iconv.php){:target="_blank"}
 
 #### PHP OPcache
-We strongly recommend you verify the  [PHP OPcache](http://php.net/manual/en/intro.opcache.php){:target="&#95;blank"} is enabled for performance reasons. The OPcache is enabled in many PHP distributions. To verify if it is installed, see our PHP documentation for [CentOS]({{page.baseurl}}install-gde/prereq/php-centos.html){:target="&#95;blank"} or [Ubuntu]({{page.baseurl}}install-gde/prereq/php-ubuntu.html){:target="&#95;blank"}.
 
-We strongly recommend you verify that [PHP OPcache](http://php.net/manual/en/intro.opcache.php){:target="_blank"} is enabled for performance reasons. The OPcache is enabled in many PHP distributions. To verify if it is installed, see our PHP documentation for [CentOS]({{ page.baseurl }}/install-gde/prereq/php-centos.html){:target="_blank"} or [Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-ubuntu.html){:target="_blank"}.
+We strongly recommend you verify that [PHP OPcache](http://php.net/manual/en/intro.opcache.php){:target="_blank"} is enabled for performance reasons. The OPcache is enabled in many PHP distributions. To verify if it is installed, see our PHP documentation for [CentOS and Ubuntu]({{ page.baseurl }}/install-gde/prereq/php-centos-ubuntu.html){:target="_blank"}.
 
 If you must install it separately, see the [PHP OPcache documentation](http://php.net/manual/en/opcache.setup.php){:target="_blank"}.
 
@@ -96,11 +95,13 @@ For more information, see [Required PHP settings]({{ page.baseurl }}/install-gde
 
 Mail Transfer Agent (MTA) or an SMTP server
 
-### Magento can use the following technologies:
+### Magento technologies
 
-*	[Redis]({{ page.baseurl }}/config-guide/redis/config-redis.html) version 3.2 (compatible with 2.4+ ) for page caching and session storage
-*	[Varnish]({{ page.baseurl }}/config-guide/varnish/config-varnish.html) version 4.x or 5.0
-*	[memcached]({{ page.baseurl }}/config-guide/memcache/memcache.html) latest stable version for session storage with either `memcache` or `memcached` PHP extensions (latest stable version)
+Magento can use the following technologies:
+
+*	[Redis]({{page.baseurl}}/config-guide/redis/config-redis.html) version 3.2 (compatible with 2.4+ ) for page caching and session storage
+*	[Varnish]({{page.baseurl}}/config-guide/varnish/config-varnish.html) version 4.x or 5.0
+*	[memcached]({{page.baseurl}}/config-guide/memcache/memcache.html) latest stable version for session storage with either `memcache` or `memcached` PHP extensions (latest stable version)
 
 ####	{{site.data.var.ee}} only
 
